@@ -33,6 +33,10 @@ a{
     color: black;
 }
 
+a:hover{
+    color: #d24036;
+}
+
 .imgRon{
     width: 400px;
     border: solid 10px;
