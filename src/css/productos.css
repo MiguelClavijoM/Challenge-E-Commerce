@@ -1,12 +1,7 @@
-.w-75{
-    border: none;
+.w-75 {
+  border: none;
 }
 
-.container-fluid{
-    display: flex;
+.container-fluid {
+  display: flex;
 }
-
-/* img{
-    width: 100px;
-    height: 100px;
-} */

@@ -1,105 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Productos Internacionales</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-    crossorigin="anonymous"/>
-  <link rel="stylesheet" href="./src/css/styles.css" />
-  <link rel="stylesheet" href="./src/css/productos.css">
-</head>
-<body>
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./src/css/styles.css" />
+    <link rel="stylesheet" href="./src/css/productos.css" />
+    <link rel="stylesheet" href="./src/css/carrito.css" />
+  </head>
+  <body>
     <div
-    class="container-fluid shadow p-3 mb-5 bg-body rounded text-aling-center"
-  >
-    <div class="col-12">
-      <div class="row align-items-center text-center">
-        <div class="col-2 text-center">
-          <img src="./src/img/iconoLicorin" alt="lic  orin" class="logo" />
-        </div>
-        <div class="col-2"><a href="./index.html">Inicio</a></div>
-        <div class="col-2"><a href="./productos.html">Productos</a></div>
-        <div class="col-2">
-          <a href="./productosNacionales.html"
-            >Productos <br />
-            Nacionales</a
-          >
-        </div>
-        <div class="col-2">
-          <a href="./productosInternacionales.html"
-            >Productos <br />
-            Internacionales</a
-          >
-        </div>
-        <div class="col-2 text-center"><button class="carrito">Carrito</button></div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="container-fluid text-aling-center shadow-sm p-3 mb-5 bg-body rounded">
-    <div class="col-12">
-      <div class="row">
-        <div class="col-4">
-          <div class="card w-75">
-            <div class="card-body">
-              <h5 class="card-title">Productos Internacionales</h5>
-              <p class="card-text">A continuación podrá ver todos los productos que tenemos. En este caso sólo verá productos internacionales.</p>
-              <a href="#" class="btn btn-secondary">Ver todos</a>
-            </div>
+      class="container-fluid shadow p-3 mb-5 bg-body rounded text-aling-center"
+    >
+      <div class="col-12">
+        <div class="row align-items-center text-center">
+          <div class="col-2 text-center">
+            <img src="./src/img/iconoLicorin" alt="lic  orin" class="logo" />
+          </div>
+          <div class="col-2"><a href="./index.html">Inicio</a></div>
+          <div class="col-2"><a href="./productos.html">Productos</a></div>
+          <div class="col-2">
+            <a href="./productosNacionales.html"
+              >Productos <br />
+              Nacionales</a
+            >
+          </div>
+          <div class="col-2">
+            <a href="./productosInternacionales.html"
+              >Productos <br />
+              Internacionales</a
+            >
+          </div>
+          <div class="col-2 text-center">
+            <button class="carrito" id="cart-icon">Carrito</button>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="cart">
+      <h2 class="cart-title"></h2>
+      <div class="cart-content"></div>
+      <div class="total">
+        <div class="total-title">Total</div>
+        <div class="total-price">$0</div>
+      </div>
+      <button type="button" class="btn-buy">COMPRAR</button>
+      <i class="bx bx-x" id="close-cart"></i>
+    </div>
+
+    <div
+      class="container-fluid text-aling-center shadow-sm p-3 mb-5 bg-body rounded"
+    >
+      <div class="col-12">
+        <div class="row">
+          <div class="col-4">
+            <div class="card w-75">
+              <div class="card-body">
+                <h5 class="card-title">Productos Internacionales</h5>
+                <p class="card-text">
+                  A continuación podrá ver todos los productos que tenemos. En
+                  este caso sólo verá productos internacionales.
+                </p>
+                <a href="./productos.html" class="btn btn-secondary"
+                  >Ver todos</a
+                >
+              </div>
+            </div>
+          </div>
           <div class="col-8">
             <div class="row row-cols-1 row-cols-md-2 g-4">
               <div class="col">
                 <div class="card">
-                  <img src="./src/img/jackDaniels.jpg" class="card-img-top" alt="...">
+                  <img
+                    src="./src/img/jackDaniels.jpg"
+                    class="card-img-top product-img"
+                    alt="..."
+                  />
                   <div class="card-body">
-                    <p class="card-text">JACK DANIEL'S</p>
-                    <p class="card-text">$118.000</p>
-                    <a href="#" class="btn btn-secondary">Agregar al carrito</a>
+                    <p class="card-text product-title">JACK DANIEL'S</p>
+                    <p class="card-text price">$118000</p>
+                    <a href="#" class="btn btn-secondary add-cart"
+                      >Agregar al carrito</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card">
+                  <img
+                    src="./src/img/oldParr.jpg"
+                    class="card-img-top product-img"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <p class="card-text product-title">OLD PARR</p>
+                    <p class="card-text price">$106000</p>
+                    <a href="#" class="btn btn-secondary add-cart"
+                      >Agregar al carrito</a
+                    >
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card">
-                  <img src="./src/img/oldParr.jpg" class="card-img-top" alt="...">
+                  <img
+                    src="./src/img/budweiser.jpg"
+                    class="card-img-top product-img"
+                    alt="..."
+                  />
                   <div class="card-body">
-                    <p class="card-text">OLD PARR</p>
-                    <p class="card-text">$106.000</p>
-                    <a href="#" class="btn btn-secondary">Agregar al carrito</a>
+                    <p class="card-text product-title">BUDWEISER X6</p>
+                    <p class="card-text price">$14000</p>
+                    <a href="#" class="btn btn-secondary add-cart"
+                      >Agregar al carrito</a
+                    >
                   </div>
                 </div>
               </div>
               <div class="col">
                 <div class="card">
-                  <img src="./src/img/budweiser.jpg" class="card-img-top" alt="...">
+                  <img
+                    src="./src/img/white-label.jpg"
+                    class="card-img-top product-img"
+                    alt="..."
+                  />
                   <div class="card-body">
-                    <p class="card-text">BUDWEISER X6</p>
-                    <p class="card-text">$14.000</p>
-                    <a href="#" class="btn btn-secondary">Agregar al carrito</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card">
-                  <img src="./src/img/white-label.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <p class="card-text">WHITE WALKER</p>
-                    <p class="card-text">$119.000</p>
-                    <a href="#" class="btn btn-secondary">Agregar al carrito</a>
+                    <p class="card-text product-title">WHITE WALKER</p>
+                    <p class="card-text price">$119000</p>
+                    <a href="#" class="btn btn-secondary add-cart"
+                      >Agregar al carrito</a
+                    >
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
       </div>
     </div>
-  </div>
-</body>
+    <script src="./src/js/carrito.js"></script>
+  </body>
 </html>
